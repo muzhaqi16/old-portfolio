@@ -2,13 +2,14 @@
   box-sizing: border-box;
 }
 body {
-  text-align: center;
   height: 100vh;
   font-size: 1.3rem;
-  background-color: lightgrey;
+  font-family: 'Lora', serif;
 }
 .nav-bar{
-  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
   padding: 1%;
   position: fixed;
   top: 0;
@@ -16,22 +17,81 @@ body {
   right: 0;
   z-index: 1000;
 }
-main{
-  margin-top: 10%;
+.nav-bar a{
+  padding: 10px;
+  color: white;
+  text-decoration: none;
 }
 header{
-  min-height: 20vh;
+  background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("img/profile.jpg");
+  background-size:cover;
+  padding: 5%;
+  text-align: center;
+  display: flex;
+  color: white;
+  min-height: 50vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1,h3{
+  font-family: 'Open Sans', sans-serif;
+}
+.hero-button button{
+  padding: 10px;
+}
+main{
+
 }
 section{
   min-height: 200px;
   padding: 5%;
-  background-color: #bbb;
+}
+.projects{
+    text-align: center;
+}
+.project{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  border-bottom:1px solid lightgrey;
+  padding-bottom:20px;
+}
+.project img{
+  height:30vh;
 }
 .get-in-touch{
   background-color:white;
+  text-align:center;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+fieldset{
+  border: none;
+}
+.contact textarea,input{
+      width: 100%;
+      padding: 10px;
+      margin-bottom:10px;
+}
+#submit{
+  border:none;
 }
 footer{
   padding: 1%;
   min-height: 20px;
   background-color: #ddd;
+  text-align: center;
+}
+.social{
+  padding: 0px;
+}
+.social li{
+  display: inline-block;
+  vertical-align: inherit;
 }
