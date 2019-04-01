@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  height: 100vh;
+  font-size: 1.3rem;
+  background-color: lightgrey;
+}
+.nav-bar{
+  background-color: gray;
+  padding: 1%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+main{
+  margin-top: 10%;
+}
+header{
+  min-height: 20vh;
+}
+section{
+  min-height: 200px;
+  padding: 5%;
+  background-color: #bbb;
+}
+.get-in-touch{
+  background-color:white;
+}
+footer{
+  padding: 1%;
+  min-height: 20px;
+  background-color: #ddd;
+}
