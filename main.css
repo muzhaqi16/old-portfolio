@@ -9,26 +9,17 @@ body {
   font-size: 1.4rem;
   font-family: 'Lora', serif;
 }
-.nav-bar{
-  display: flex;
-  justify-content: space-between;
-  background-color: black;
-  padding: 1%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+h1,h2,h3{
+  font-family: "Calibre", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
-.nav-bar a{
-  padding: 10px;
-  color: white;
-  text-decoration: none;
+a:hover{
+  color: red;
 }
 header{
   background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("img/home-bg-img.jpg");
   background-size:cover;
-  padding: 5%;
   text-align: center;
   display: flex;
   color: #fffeec;
@@ -36,15 +27,49 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top:20px;
+  padding:40px 20px;
 }
-h1,h3{
-  font-family: 'Open Sans', sans-serif;
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #100e17;
+  padding: 1%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+nav a{
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#dropdown-menu{
+  padding: 10px;
+  margin:0 13px;
+  width: calc(100vw/2);
+}
+.hide{
+  display: none;
+}
+#dropdown-menu li{
+  margin-bottom: 10px;
+}
+.logo{
+  color:#2196F3;
 }
 .hero-button button{
   padding: 10px;
   cursor: pointer;
   border:none;
+  color:white;
   margin-bottom:10px;
   border-radius: 5px;
   background-color:#2196F3;
@@ -55,14 +80,11 @@ h1,h3{
   padding: 20px;
 }
 .about-me p{
-  font-size: 20px;
-  line-height: 30px;
   text-align: left;
 }
 .projects{
     text-align: center;
     padding: 20px;
-    flex-wrap: wrap;
     border-bottom:1px solid lightgrey;
 }
 .project-container{
@@ -76,28 +98,43 @@ h1,h3{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  max-width:500px;
+  max-width:450px;
   min-width:300px;
   width:100%;
   padding: 10px 20px;
   border-radius: 30px;
-  background-color: rgba(255, 255, 255, 25%);
   margin-bottom: 20px;
   box-shadow:3px 2px 3px 3px lightgray;
+}
+.project h3{
+  margin:10px 0;
 }
 .project img{
   height:30vh;
 }
 .project p{
-  font-size: 14px;
-  line-height: 22px;
-}
-.project h3{
-  margin:10px 0;
+  font-size: 18px;
+  text-align:left;
+  line-height: 24px;
 }
 .project a {
   color:#2196F3;
+  font-size: 18px;
   text-decoration: none;
+}
+.project a:hover{
+  color: red;
+}
+.technologies{
+  padding: 0;
+  margin: 0;
+}
+.technologies li{
+  display: inline-block;
+}
+.technologies img{
+  width: 24px;
+  height: 24px;
 }
 .get-in-touch{
   text-align:center;
@@ -124,13 +161,22 @@ legend a{
 .contact textarea,input{
       width: 100%;
       padding: 10px;
+      border: 1px solid;
       margin-bottom:10px;
+      border-radius:10px;
+}
+.contact textarea:focus,input:focus{
+  border:2px solid blue;
+  outline: none !important;
 }
 #submit{
   border:none;
   background-color: #2196F3;
   cursor: pointer;
   color: white;
+}
+button:hover,#submit:hover{
+  background-color: rgba(33, 150, 243,0.8);
 }
 footer{
   padding: 1%;
@@ -147,13 +193,29 @@ footer{
 .social li{
   display: inline-block;
   vertical-align: inherit;
+  padding: 10px;
+}
+.social li:hover{
+  opacity: 0.8;
 }
 @media all and (min-width:550px){
-
+  header{
+    padding:60px 20px;
+  }
 }
 @media all and (min-width:850px){
   header{
     min-height: 70vh;
+    padding: 0;
+  }
+  #nav-toggle{
+    display: none;
+  }
+  #dropdown-menu{
+    display:inline-block;
+  }
+  #dropdown-menu li{
+    display: inline-block;
   }
   .about-me{
     margin:0 auto;
@@ -165,6 +227,7 @@ footer{
   .projects{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
   }
   .project-container{
     flex-wrap: wrap;
@@ -176,6 +239,16 @@ footer{
   }
   .contact{
       margin:0 auto;
-      width: 60%;
+      width: 70%;
   }
+}
+@media all and (min-width:1200px){
+  .contact{
+        width: 60%;
+    }
+  }
+@media all and (min-width:1200px){
+  .contact{
+        width: 50%;
+    }
 }
