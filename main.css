@@ -1,9 +1,12 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   height: 100vh;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-family: 'Lora', serif;
 }
 .nav-bar{
@@ -23,47 +26,80 @@ body {
   text-decoration: none;
 }
 header{
-  background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("img/profile.jpg");
+  background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("img/home-bg-img.jpg");
   background-size:cover;
   padding: 5%;
   text-align: center;
   display: flex;
-  color: white;
+  color: #fffeec;
   min-height: 50vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top:20px;
 }
 h1,h3{
   font-family: 'Open Sans', sans-serif;
 }
 .hero-button button{
   padding: 10px;
+  cursor: pointer;
+  border:none;
+  margin-bottom:10px;
+  border-radius: 5px;
+  background-color:#2196F3;
 }
-main{
-
+.about-me{
+  text-align: center;
+  border-bottom:1px solid lightgrey;
+  padding: 20px;
 }
-section{
-  min-height: 200px;
-  padding: 5%;
+.about-me p{
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
 }
 .projects{
     text-align: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    border-bottom:1px solid lightgrey;
+}
+.project-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .project{
   display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  max-width:500px;
+  min-width:300px;
   width:100%;
-  border-bottom:1px solid lightgrey;
-  padding-bottom:20px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 25%);
+  margin-bottom: 20px;
+  box-shadow:3px 2px 3px 3px lightgray;
 }
 .project img{
   height:30vh;
 }
+.project p{
+  font-size: 14px;
+  line-height: 22px;
+}
+.project h3{
+  margin:10px 0;
+}
+.project a {
+  color:#2196F3;
+  text-decoration: none;
+}
 .get-in-touch{
-  background-color:white;
   text-align:center;
 }
 .contact{
@@ -71,8 +107,19 @@ section{
   flex-direction: column;
   width: 100%;
 }
+.contact h2{
+    margin-bottom: 10px;
+}
 fieldset{
   border: none;
+}
+.contact legend{
+  font-size: 20px;
+  line-height: 30px;
+}
+legend a{
+  text-decoration: none;
+  color:#2196F3;
 }
 .contact textarea,input{
       width: 100%;
@@ -81,17 +128,54 @@ fieldset{
 }
 #submit{
   border:none;
+  background-color: #2196F3;
+  cursor: pointer;
+  color: white;
 }
 footer{
   padding: 1%;
   min-height: 20px;
-  background-color: #ddd;
+  background-color: #100e17;
+  opacity: 0.9;
+  color: white;
   text-align: center;
 }
 .social{
+  opacity: 1;
   padding: 0px;
 }
 .social li{
   display: inline-block;
   vertical-align: inherit;
+}
+@media all and (min-width:550px){
+
+}
+@media all and (min-width:850px){
+  header{
+    min-height: 70vh;
+  }
+  .about-me{
+    margin:0 auto;
+    width:70%;
+  }
+  .about-me p{
+    line-height: 34px;
+  }
+  .projects{
+    display: flex;
+    flex-direction: column;
+  }
+  .project-container{
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .project{
+    margin-right:20px;
+  }
+  .contact{
+      margin:0 auto;
+      width: 60%;
+  }
 }
