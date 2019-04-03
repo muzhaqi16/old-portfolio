@@ -213,6 +213,7 @@ footer{
   }
   #dropdown-menu{
     display:inline-block;
+    width:auto;
   }
   #dropdown-menu li{
     display: inline-block;
