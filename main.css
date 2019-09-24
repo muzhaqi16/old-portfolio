@@ -111,6 +111,7 @@ nav a{
 }
 .project img{
   height:30vh;
+  width: 100%;
 }
 .project p{
   font-size: 18px;
