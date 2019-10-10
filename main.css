@@ -75,11 +75,26 @@ nav a{
   background-color:#2196F3;
 }
 .about-me{
+  width:100vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   border-bottom:1px solid lightgrey;
   padding: 20px;
 }
-.about-me p{
+.profile-photo{
+  width: 300px;
+  min-width: 300px;
+  height: 300px;
+  border: 3px solid var(--dark-secondary);
+  border-radius: 100%;
+}
+.info{
+  margin: 0 20px;
+}
+.info p{
   text-align: left;
 }
 .projects{
@@ -98,24 +113,24 @@ nav a{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  max-width:450px;
-  min-width:300px;
+  max-width:350px;
   width:100%;
-  padding: 10px 20px;
-  border-radius: 30px;
+  border-radius: 15px 15px 0 0;
   margin-bottom: 20px;
-  box-shadow:3px 2px 3px 3px lightgray;
+  border:1px solid #00c6ff;
 }
 .project h3{
   margin:10px 0;
 }
 .project img{
-  height:30vh;
   width: 100%;
+  padding: 0;
+  border-radius: 15px 15px 0 0;
 }
 .project p{
   font-size: 18px;
   text-align:left;
+  padding: 0 20px;
   line-height: 24px;
 }
 .project a {
@@ -136,6 +151,9 @@ nav a{
 .technologies img{
   width: 24px;
   height: 24px;
+}
+.project-links{
+  margin-bottom: 10px;
 }
 .get-in-touch{
   text-align:center;
@@ -203,6 +221,9 @@ footer{
   header{
     padding:60px 20px;
   }
+  .about-me{
+    flex-direction: column;
+  }
 }
 @media all and (min-width:850px){
   header{
@@ -221,7 +242,8 @@ footer{
   }
   .about-me{
     margin:0 auto;
-    width:70%;
+    width:100%;
+    flex-direction: row;
   }
   .about-me p{
     line-height: 34px;
